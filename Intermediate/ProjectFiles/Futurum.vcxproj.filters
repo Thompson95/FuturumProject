@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Futurum.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{C2309B7F-CB7F-46E4-B8B1-243EAC2A4068}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Futurum.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\FuturumEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{0C25B0BA-5F93-4F28-8E2D-FB4BEA4A7873}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Futurum">
+      <UniqueIdentifier>{B92F058C-A29A-473C-BBC6-AE5F40A28935}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Futurum\DynamicLight.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\DynamicLight.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Futurum\Futurum.Build.cs">
+      <Filter>Source\Futurum</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Futurum\Futurum.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\Futurum.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Futurum\FuturumCharacter.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\FuturumCharacter.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Futurum\FuturumGameMode.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\FuturumGameMode.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Futurum\FuturumHUD.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\FuturumHUD.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Futurum\FuturumProjectile.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\FuturumProjectile.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Futurum\Interactable.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Futurum\Interactable.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Futurum\BallEnemy.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Futurum\Enemy.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Futurum\EventDispatcher.h">
+      <Filter>Source\Futurum</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Futurum\BallEnemy.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Futurum\Enemy.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Futurum\EventDispatcher.cpp">
+      <Filter>Source\Futurum</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
