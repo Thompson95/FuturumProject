@@ -25,17 +25,13 @@ private:
 	void SpawnEnemy();
 
 	UFUNCTION()
+	void SpawnEnemyWithLights();
+
+	UFUNCTION()
 	void SetLightsState(bool State);
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class ABallEnemy> BallEnemyClass;
-
-	//UPROPERTY()
-	//FTimerHandle LightsTimerHandle;
-
-	//UPROPERTY()
-	//FTimerDelegate LightsTimerDelegate;
-
 };
 
 

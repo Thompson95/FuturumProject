@@ -19,15 +19,39 @@ AFuturumGameMode::AFuturumGameMode()
 	// use our custom HUD class
 	HUDClass = AFuturumHUD::StaticClass();
 	BallEnemyClass = ABallEnemy::StaticClass();
-
+	
 	EventDispatcher = CreateDefaultSubobject<UEventDispatcher>(TEXT("Event Dispatcher"));
-	EventDispatcher->OnEnemyDestroyed.AddDynamic(this, &AFuturumGameMode::SpawnEnemy);
+	EventDispatcher->OnEnemyDestroyed.AddDynamic(this, &AFuturumGameMode::SpawnEnemyWithLights);
 }
 
 void AFuturumGameMode::StartPlay()
 {
 	Super::StartPlay();
 	SpawnEnemy();
+}
+
+void AFuturumGameMode::SpawnEnemyWithLights()
+{
+	if (Role == ROLE_Authority)
+	{
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{
+			FActorSpawnParameters ActorSpawnParams;
+			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+			FVector StartLocation(FMath::RandRange(-1250.f, 1250.f), FMath::RandRange(-1250.f, 1250.f), 500.f);
+			ABallEnemy* Enemy = World->SpawnActor<ABallEnemy>(BallEnemyClass, StartLocation, FRotator::ZeroRotator, ActorSpawnParams);
+
+			FVector StartVelocity(FMath::RandRange(-1250.f, 1250.f), FMath::RandRange(-1250.f, 1250.f), FMath::RandRange(-1250.f, 1250.f));
+			Enemy->StaticMesh->SetPhysicsLinearVelocity(StartVelocity);
+
+			FTimerHandle LightsTimerHandle;
+			FTimerDelegate LightsTimerDelegate;
+			bool State = true;
+			LightsTimerDelegate.BindUFunction(this, FName("SetLightsState"), State);
+			World->GetTimerManager().SetTimer(LightsTimerHandle, LightsTimerDelegate, 3.f, false);
+		}
+	}
 }
 
 void AFuturumGameMode::SpawnEnemy()
@@ -49,7 +73,6 @@ void AFuturumGameMode::SpawnEnemy()
 			FTimerDelegate LightsTimerDelegate;
 			bool State = true;
 			LightsTimerDelegate.BindUFunction(this, FName("SetLightsState"), State);
-			World->GetTimerManager().SetTimer(LightsTimerHandle, LightsTimerDelegate, 3.f, false);
 		}
 	}
 }
