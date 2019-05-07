@@ -423,10 +423,8 @@
     <ClInclude Include="..\..\Source\Futurum\BallEnemy.h" />
     <ClInclude Include="..\..\Source\Futurum\DynamicLight.h" />
     <None Include="..\..\Source\Futurum\Futurum.Build.cs" />
-    <ClCompile Include="..\..\Source\Futurum\Enemy.cpp" />
     <ClCompile Include="..\..\Source\Futurum\EventDispatcher.cpp" />
     <ClCompile Include="..\..\Source\Futurum\Futurum.cpp" />
-    <ClInclude Include="..\..\Source\Futurum\Enemy.h" />
     <ClInclude Include="..\..\Source\Futurum\EventDispatcher.h" />
     <ClInclude Include="..\..\Source\Futurum\Futurum.h" />
     <ClCompile Include="..\..\Source\Futurum\FuturumCharacter.cpp" />

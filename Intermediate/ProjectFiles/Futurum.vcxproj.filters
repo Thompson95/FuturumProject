@@ -82,18 +82,12 @@
     <ClInclude Include="..\..\Source\Futurum\BallEnemy.h">
       <Filter>Source\Futurum</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Futurum\Enemy.h">
-      <Filter>Source\Futurum</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\Futurum\EventDispatcher.h">
       <Filter>Source\Futurum</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Futurum\BallEnemy.cpp">
-      <Filter>Source\Futurum</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Futurum\Enemy.cpp">
       <Filter>Source\Futurum</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Futurum\EventDispatcher.cpp">
